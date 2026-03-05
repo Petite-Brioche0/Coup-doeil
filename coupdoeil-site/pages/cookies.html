@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies – Coup d'Oeil</title>
+    <meta
+      name="description"
+      content="Politique cookies du site Coup d'Oeil : types de cookies, choix des visiteurs."
+    />
+    <meta property="og:title" content="Cookies – Coup d'Oeil" />
+    <meta property="og:description" content="Politique de cookies et gestion des préférences sur le site Coup d'Oeil." />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/forms.css" />
+    <link rel="icon" href="../assets/img/logo/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="navbar" role="navigation" aria-label="Navigation principale">
+        <a class="logo" href="../index.html">
+          <img
+            src="../assets/img/logo/nobg_logo_light.png"
+            alt="Logo Coup d'Oeil"
+            class="logo-img logo-img--light"
+            decoding="async"
+          />
+          <img
+            src="../assets/img/logo/nobg_logo_dark.png"
+            alt=""
+            class="logo-img logo-img--dark"
+            aria-hidden="true"
+            decoding="async"
+          />
+          <span class="sr-only">Coup d'Oeil</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a data-page="index.html" href="../index.html">Accueil</a></li>
+            <li>
+              <a data-page="pages/events.html" href="events.html"
+                >Nos marchés</a
+              >
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html"
+                >Nos artistes</a
+              >
+            </li>
+            <li>
+              <a data-page="pages/about.html" href="about.html">À propos</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-contact-btn" href="contact.html">Contact</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+            aria-label="Basculer le thème"
+          >
+            <img
+              src="../assets/img/logo/light_dark.png"
+              alt=""
+              class="theme-toggle__icon"
+              aria-hidden="true"
+              decoding="async"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="contenu">
+      <section class="section legal-hero">
+        <p class="badge">Préférences</p>
+        <h1>Politique cookies</h1>
+        <p>
+          Nous privilégions un fonctionnement sans traqueurs marketing. Seuls des
+          cookies essentiels et un indicateur d'audience anonymisé peuvent être
+          déposés sur votre navigateur.
+        </p>
+        <div class="pill-nav" role="navigation" aria-label="Navigation juridique">
+          <a href="legal.html">Mentions légales</a>
+          <a href="privacy.html">Confidentialité</a>
+          <a class="active" href="cookies.html">Cookies</a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="legal-columns">
+          <article class="card">
+            <h2>Cookies strictement nécessaires</h2>
+            <p>
+              Utilisés pour mémoriser l'état du bandeau cookies, le thème
+              graphique (clair/sombre) et vos brouillons de formulaires. Ils ne
+              contiennent aucune donnée sensible.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Mesure d'audience locale</h2>
+            <p>
+              Un compteur de visites anonymes peut être activé pour connaître les
+              pages consultées et détecter les erreurs. Les données restent sur
+              nos serveurs et ne sont pas partagées avec des tiers.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Absence de publicité</h2>
+            <p>
+              Aucun cookie publicitaire, social ou de reciblage n'est mis en
+              place. Notre priorité est de préserver une navigation simple et
+              respectueuse de votre vie privée.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Liste des cookies déposés</h2>
+        <div class="table-scroll">
+          <table class="table-simple">
+            <caption>Cookies utilisés par Coup d'Oeil</caption>
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Finalité</th>
+                <th>Durée</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>coupdoeil_theme</td>
+                <td>Sauvegarde du mode clair/sombre</td>
+                <td>12 mois</td>
+              </tr>
+              <tr>
+                <td>coupdoeil_cookies</td>
+                <td>Preuve de consentement/refus au bandeau</td>
+                <td>6 mois</td>
+              </tr>
+              <tr>
+                <td>coupdoeil_artists / coupdoeil_visitors</td>
+                <td>Conserver vos brouillons d'inscriptions sur l'appareil</td>
+                <td>LocalStorage — supprimé par vous ou lors d'une purge</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: var(--spacing-sm);">
+          Ces données restent stockées sur votre navigateur. Aucune transmission
+          n'est effectuée sans validation explicite de votre part.
+        </p>
+      </section>
+      <section class="section">
+        <h2>Gérer vos préférences</h2>
+        <div class="legal-note">
+          <p>
+            Vous pouvez modifier votre consentement à tout moment en réinitialisant
+            le bandeau. Un nouveau choix vous sera proposé lors du prochain
+            chargement de page.
+          </p>
+        </div>
+        <button
+          class="btn secondary"
+          style="margin-top: var(--spacing);"
+          data-action="reset-cookies"
+        >
+          Réinitialiser mes choix
+        </button>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <img src="../assets/img/logo/nobg_logo_light.png" alt="Coup d'Oeil" class="footer-logo" />
+          <p>Marchés de créateurs pour valoriser les talents émergents.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/coupdoeil_event/" target="_blank" rel="noopener" aria-label="Instagram de Coup d'Oeil" class="footer-social__link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="events.html">Nos marchés</a></li>
+            <li><a href="artists.html">Nos artistes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="legal.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Écrire à l'équipe</a></li>
+            <li>
+              <a href="mailto:eventcoupdoeil@gmail.com"
+                >eventcoupdoeil@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Coup d'Oeil · Événement.</div>
+    </footer>
+    <div class="cookie-banner" role="dialog" aria-label="Bandeau cookies">
+      <p>
+        Nous utilisons des cookies techniques pour le bon fonctionnement du site
+        et une mesure d'audience locale. Vous pouvez refuser ces cookies non
+        essentiels.
+      </p>
+      <div class="cookie-actions">
+        <button class="btn" data-action="accept">Accepter</button>
+        <button class="btn secondary" data-action="deny">Refuser</button>
+      </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
