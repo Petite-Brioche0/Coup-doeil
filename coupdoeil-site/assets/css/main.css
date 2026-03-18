@@ -126,7 +126,7 @@
   --text-sm: 0.95rem;
   --text-base: 1.05rem;
   --text-lg: 1.25rem;
-  --hero-banner-image: url("../img/banner/bg-joy-light.svg");
+  --hero-banner-image: url("../img/banner/Blanc_fond_web.jpg");
 }
 
 @font-face {
@@ -208,7 +208,7 @@
     var(--color-success) 12%,
     transparent
   );
-  --hero-banner-image: url("../img/banner/bg-joy-dark.svg");
+  --hero-banner-image: url("../img/banner/fond_web_dark.jpg");
 }
 
 * {
@@ -240,26 +240,6 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 18% 12%, var(--glow-1), transparent 30%),
-    radial-gradient(circle at 78% 20%, var(--glow-2), transparent 32%),
-    radial-gradient(circle at 20% 72%, var(--glow-3), transparent 38%),
-    linear-gradient(to right,
-      color-mix(in srgb, var(--color-primary) 22%, transparent) 0%,
-      transparent 5%,
-      transparent 95%,
-      color-mix(in srgb, var(--color-primary) 22%, transparent) 100%
-    ),
-    linear-gradient(to bottom,
-      color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
-      transparent 3%,
-      transparent 97%,
-      color-mix(in srgb, var(--color-primary) 18%, transparent) 100%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-bg) 68%, transparent) 0%,
-      color-mix(in srgb, var(--color-bg) 88%, transparent) 100%
-    );
   z-index: -1;
 }
 
@@ -571,17 +551,6 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-bg) 70%, transparent) 0%,
-      color-mix(in srgb, var(--color-bg) 30%, transparent) 40%,
-      color-mix(in srgb, var(--color-bg) 70%, transparent) 100%
-    ),
-    radial-gradient(
-      circle at 12% 18%,
-      color-mix(in srgb, var(--color-primary) 18%, transparent),
-      transparent 32%
-    );
   opacity: var(--hero-opacity);
   pointer-events: none;
 }
