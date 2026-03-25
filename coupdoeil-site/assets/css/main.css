@@ -426,6 +426,7 @@ nav {
 }
 
 .theme-toggle {
+  min-width: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2306,10 +2307,17 @@ footer h4 {
     padding: 0 var(--spacing-sm);
   }
 
+   nav {
+	  flex-wrap: wrap;
+  }
+
   .navbar {
-    flex-wrap: wrap;
     gap: var(--spacing-sm);
     padding: 12px 0;
+  }
+
+  nav {
+	  flex-wrap: wrap;
   }
 
   .logo {
@@ -2322,21 +2330,12 @@ footer h4 {
   }
 
   .nav-actions {
-    gap: 8px;
+    /*gap: 8px;*/
   }
 
   .nav-contact-btn {
     padding: 7px 14px;
     font-size: 0.82rem;
-  }
-
-  .theme-toggle {
-    padding: 8px 10px;
-  }
-
-  .theme-toggle__icon {
-    width: 22px;
-    height: 22px;
   }
 
   .nav-links {
