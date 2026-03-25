@@ -79,6 +79,20 @@ const ARTISTS = [
 ];
 
 const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
+const FEATURED_ARTISTS_ORDER = ["Luzartwork", "Petit bout de goût", "Aela Byrinthe"];
+const artistNameSorter = new Intl.Collator("fr", {
+  sensitivity: "base",
+  ignorePunctuation: true,
+});
+
+const getArtistsSortedByName = (artists) =>
+  [...artists].sort((a, b) => artistNameSorter.compare(a.name, b.name));
+
+const getFeaturedArtists = () =>
+  FEATURED_ARTISTS_ORDER.map((artistName) =>
+    ARTISTS.find((artist) => artist.name === artistName)
+  ).filter(Boolean);
+
 
 (() => {
   const sanitize = (text) => text.replace(/[<>]/g, "");
@@ -214,7 +228,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
         const matchesQuery = content.includes(query);
         return matchesCat && matchesEvent && matchesQuery;
       });
-      renderArtists(filtered);
+      renderArtists(getArtistsSortedByName(filtered));
     };
     categoryButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -243,7 +257,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
     const container = document.querySelector("[data-featured-artists]");
     if (!container) return;
 
-    const featured = ARTISTS.slice(0, 3);
+    const featured = getFeaturedArtists()
     container.innerHTML = "";
 
     featured.forEach((artist) => {
@@ -269,7 +283,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
     if (!container) return;
 
     container.innerHTML = "";
-    ARTISTS.forEach((artist) => {
+    getArtistsSortedByName(ARTISTS).forEach((artist) => {
       const card = document.createElement("article");
       card.className = "card artist-card";
       card.innerHTML = `
@@ -313,7 +327,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    renderArtists(ARTISTS);
+    renderArtists(getArtistsSortedByName(ARTISTS));
     bindFilters();
     renderFeaturedArtists();
     renderEditionArtists();
