@@ -148,6 +148,63 @@
     updateFade();
   };
 
+  const initImagePerformance = () => {
+    const isFirstSlideImage = (img) => {
+      const slide = img.closest('.hero-carousel-slide, .venue-slide');
+      return Boolean(slide && slide.parentElement && slide.parentElement.firstElementChild === slide);
+    };
+
+    const isCriticalImage = (img) =>
+      Boolean(
+        img.closest('header .logo') ||
+        img.closest('.hero') ||
+        img.closest('.event-card__img') ||
+        isFirstSlideImage(img)
+      );
+
+    const optimizeImage = (img) => {
+      if (!(img instanceof HTMLImageElement)) return;
+
+      if (!img.hasAttribute('decoding')) {
+        img.decoding = 'async';
+      }
+
+      if (isCriticalImage(img)) {
+        if (!img.hasAttribute('loading')) {
+          img.loading = 'eager';
+        }
+        if (!img.hasAttribute('fetchpriority')) {
+          img.fetchPriority = 'high';
+        }
+        return;
+      }
+
+      if (!img.hasAttribute('loading')) {
+        img.loading = 'lazy';
+      }
+      if (!img.hasAttribute('fetchpriority')) {
+        img.fetchPriority = 'low';
+      }
+    };
+
+    document.querySelectorAll('img').forEach(optimizeImage);
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return;
+          if (node instanceof HTMLImageElement) {
+            optimizeImage(node);
+            return;
+          }
+          node.querySelectorAll?.('img').forEach(optimizeImage);
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  };
+
   const initHeroCarousel = () => {
     const carousel = document.querySelector("[data-hero-carousel]");
     if (!carousel) return;
@@ -205,6 +262,7 @@
     initCookiesReset();
     initNewsletter();
     initHeroBannerFade();
+    initImagePerformance();
     initHeroCarousel();
   });
 })();
