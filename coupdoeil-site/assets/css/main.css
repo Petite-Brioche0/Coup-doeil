@@ -1184,8 +1184,8 @@ main {
   transition: border-color 0.3s ease;
 }
 
-.card:hover,
-.card:focus-within {
+a.card:hover,
+a.card:focus-within {
   border-color: var(--color-primary);
 }
 
