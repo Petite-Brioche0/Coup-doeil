@@ -2290,6 +2290,7 @@ footer h4 {
 
   nav {
     flex: 1 1 100%;
+    order: 3;
   }
 
   .nav-actions {
@@ -2307,17 +2308,14 @@ footer h4 {
     padding: 0 var(--spacing-sm);
   }
 
-   nav {
-	  flex-wrap: wrap;
-  }
-
   .navbar {
+    flex-wrap: wrap;
     gap: var(--spacing-sm);
     padding: 12px 0;
   }
 
   nav {
-	  flex-wrap: wrap;
+    flex: 1 1 100%;
   }
 
   .logo {
@@ -2330,7 +2328,7 @@ footer h4 {
   }
 
   .nav-actions {
-    /*gap: 8px;*/
+    gap: 8px;
   }
 
   .nav-contact-btn {
@@ -2338,14 +2336,37 @@ footer h4 {
     font-size: 0.82rem;
   }
 
+  .theme-toggle {
+    min-width: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+  }
+
+  .theme-toggle__icon {
+    width: 22px;
+    height: 22px;
+  }
+
   .nav-links {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     gap: 8px;
     font-size: 0.88rem;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-links a {
+    white-space: nowrap;
+    flex-shrink: 0;
     padding: 7px 10px;
   }
 
