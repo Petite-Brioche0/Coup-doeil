@@ -217,10 +217,34 @@
     let current = 0;
     let autoTimer = null;
 
+    const updateSlideImagePriorities = () => {
+      slides.forEach((slide, index) => {
+        const img = slide.querySelector("img");
+        if (!img) return;
+
+        const distance = Math.min(
+          Math.abs(index - current),
+          slides.length - Math.abs(index - current)
+        );
+        const isCurrent = distance === 0;
+        const isNearby = distance === 1;
+
+        if (isCurrent || isNearby) {
+          img.loading = "eager";
+          img.fetchPriority = isCurrent ? "high" : "auto";
+          return;
+        }
+
+        img.loading = "lazy";
+        img.fetchPriority = "low";
+      });
+    };
+
     const goTo = (idx) => {
       current = (idx + slides.length) % slides.length;
       track.style.transform = `translate3d(-${current * carousel.clientWidth}px, 0, 0)`;
       dots.forEach((d, i) => d.classList.toggle("active", i === current));
+      updateSlideImagePriorities();
     };
 
     const next = () => goTo(current + 1);
@@ -237,11 +261,6 @@
 
     window.addEventListener("resize", () => goTo(current), { passive: true });
 
-    slides.forEach((slide) => {
-      const img = slide.querySelector("img");
-      if (img && img.loading === "lazy") img.loading = "eager";
-    });
-
     carousel.addEventListener("mouseenter", () => clearInterval(autoTimer));
     carousel.addEventListener("mouseleave", resetAuto);
 
@@ -252,6 +271,7 @@
       if (Math.abs(delta) > 40) { delta > 0 ? next() : prev(); resetAuto(); }
     }, { passive: true });
 
+    goTo(0);
     resetAuto();
   };
 
