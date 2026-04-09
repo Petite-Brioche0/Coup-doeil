@@ -143,6 +143,19 @@ const ARTISTS = [
 ];
 
 const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>`;
+const FEATURED_ARTISTS_ORDER = ["Luzartwork", "Petit bout de goût", "Aela Byrinthe"];
+const artistNameSorter = new Intl.Collator("fr", {
+  sensitivity: "base",
+  ignorePunctuation: true,
+});
+
+const getArtistsSortedByName = (artists) =>
+  [...artists].sort((a, b) => artistNameSorter.compare(a.name, b.name));
+
+const getFeaturedArtists = () =>
+  FEATURED_ARTISTS_ORDER.map((artistName) =>
+    ARTISTS.find((artist) => artist.name === artistName)
+  ).filter(Boolean);
 
 (() => {
   const sanitize = (text) => text.replace(/[<>]/g, "");
@@ -316,7 +329,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
 
     featured.forEach((artist) => {
       if (isEditorial) {
-        const imgSrc = typeof artist.img === 'object' ? artist.img['saint-valentin'] : artist.img;
+        const imgSrc = typeof artist.img === 'object' ? artist.img['printemps'] || artist.img['saint-valentin'] : artist.img;
         const item = document.createElement("a");
         item.className = "ed-gallery__item";
         item.href = sanitize(artist.link);
@@ -334,7 +347,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
         const card = document.createElement("div");
         card.className = "card artist-card";
         card.innerHTML = `
-          ${buildCarouselHTML(artist)}
+          ${buildCarouselHTML(artist, 'printemps')}
           <h3>${sanitize(artist.name)}</h3>
           <div class="artist-meta">
             <span class="badge">${sanitize(artist.category)}</span>
@@ -362,23 +375,6 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
 
     container.innerHTML = "";
     getArtistsSortedByName(list).forEach((artist) => {
-      if (isEditorial) {
-        const imgSrc = typeof artist.img === 'object' ? artist.img[editionFilter] || artist.img['saint-valentin'] : artist.img;
-        const item = document.createElement("a");
-        item.className = "ed-gallery__item";
-        item.href = sanitize(artist.link);
-        item.target = "_blank";
-        item.rel = "noopener";
-        item.innerHTML = `
-          <div class="ed-gallery__media">
-            <img src="${resolveImg(imgSrc)}" alt="${sanitize(artist.name)}" loading="lazy" />
-          </div>
-          <p class="ed-gallery__cat">${sanitize(artist.category)}</p>
-          <h3 class="ed-gallery__name">${sanitize(artist.name)}</h3>
-        `;
-        container.appendChild(item);
-        return;
-      }
       const card = document.createElement("article");
       card.className = "card artist-card";
       card.innerHTML = `
@@ -422,7 +418,7 @@ const INSTAGRAM_ICON = `<svg xmlns="http://www.w3.org/2000/svg" width="18" heigh
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    renderArtists(ARTISTS);
+    renderArtists(getArtistsSortedByName(ARTISTS));
     bindFilters();
     renderFeaturedArtists();
     renderEditionArtists();
