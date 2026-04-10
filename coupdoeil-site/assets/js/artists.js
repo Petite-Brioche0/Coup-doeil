@@ -375,20 +375,37 @@ const getFeaturedArtists = () =>
 
     container.innerHTML = "";
     getArtistsSortedByName(list).forEach((artist) => {
-      const card = document.createElement("article");
-      card.className = "card artist-card";
-      card.innerHTML = `
-        ${buildCarouselHTML(artist, editionFilter)}
-        <h3>${sanitize(artist.name)}</h3>
-        <div class="artist-meta">
-          <span class="badge">${sanitize(artist.category)}</span>
-          <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
-        </div>
-        <p>${sanitize(artist.bio)}</p>
-        <div class="tags">${artist.tags.map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
-      `;
-      initCarousel(card);
-      container.appendChild(card);
+      if (isEditorial) {
+        const imgSrc = typeof artist.img === 'object' ? artist.img[editionFilter] || artist.img['saint-valentin'] : artist.img;
+        const item = document.createElement("a");
+        item.className = "ed-gallery__item";
+        item.href = sanitize(artist.link);
+        item.target = "_blank";
+        item.rel = "noopener";
+        item.innerHTML = `
+          <div class="ed-gallery__media">
+            <img src="${resolveImg(imgSrc)}" alt="${sanitize(artist.name)}" loading="lazy" />
+          </div>
+          <p class="ed-gallery__cat">${sanitize(artist.category)}</p>
+          <h3 class="ed-gallery__name">${sanitize(artist.name)}</h3>
+        `;
+        container.appendChild(item);
+      } else {
+        const card = document.createElement("article");
+        card.className = "card artist-card";
+        card.innerHTML = `
+          ${buildCarouselHTML(artist, editionFilter)}
+          <h3>${sanitize(artist.name)}</h3>
+          <div class="artist-meta">
+            <span class="badge">${sanitize(artist.category)}</span>
+            <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
+          </div>
+          <p>${sanitize(artist.bio)}</p>
+          <div class="tags">${artist.tags.map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
+        `;
+        initCarousel(card);
+        container.appendChild(card);
+      }
     });
   };
 

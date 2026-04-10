@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artistes – Coup d'Oeil</title>
+    <title>Nos artistes – Coup d'Oeil</title>
     <meta
       name="description"
       content="Répertoire filtrable des artistes Coup d'Oeil : illustration, bijoux, photo, textile, sculpture."
     />
-    <meta property="og:title" content="Artistes – Coup d'Oeil" />
+    <meta property="og:title" content="Nos artistes – Coup d'Oeil" />
     <meta property="og:description" content="Découvrez les artistes sélectionnés pour les marchés Coup d'Oeil : illustration, bijoux, photographie et plus." />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/forms.css" />
@@ -72,19 +72,34 @@
         </div>
       </div>
     </header>
+
     <main id="contenu">
-      <section class="hero">
-        <div>
-          <h1>Artistes Coup d'Oeil</h1>
-          <p>
-            Filtrez par discipline ou recherchez par nom et description pour
-            découvrir les talents sélectionnés.
+
+      <!-- ─── INTRO — split (image / texte) ─── -->
+      <section class="split">
+        <div class="split__media">
+          <img src="../assets/img/event/saintValentin/coupdoeuil-done-3.jpg" alt="Créations d'artistes au marché Coup d'Oeil" loading="lazy" />
+        </div>
+        <div class="split__content">
+          <p class="split__kicker">Artistes</p>
+          <h1 class="split__title">Des talents<br>sélectionnés.</h1>
+          <p class="split__text">
+            Chaque artiste est choisi à la main, candidature par candidature. Pas d'IA, pas de dropshipping — uniquement des créateur·rices qui produisent eux-mêmes leurs œuvres, à Lyon ou en région lyonnaise.
           </p>
+          <a class="split__cta" href="contact.html">Candidater</a>
         </div>
       </section>
-      <section class="section">
-        <div class="section-header">
-          <h2>Filtrer la galerie</h2>
+
+      <!-- ─── GALERIE FILTRÉE ─── -->
+      <section class="ed-section" id="galerie">
+        <div class="ed-section__head">
+          <p class="ed-section__kicker">Répertoire</p>
+          <div>
+            <h2 class="ed-section__title">Tous nos<br>artistes.</h2>
+            <p class="ed-section__intro">
+              Filtrez par discipline ou par édition, ou recherchez par nom pour découvrir les talents sélectionnés.
+            </p>
+          </div>
         </div>
         <input
           class="search-input"
@@ -105,15 +120,13 @@
         </div>
         <div class="card-grid" data-artists aria-live="polite"></div>
       </section>
+
     </main>
     <footer>
       <div class="footer-content">
         <div>
           <img src="../assets/img/logo/nobg_logo_light.png" alt="Coup d'Oeil" class="footer-logo" />
-          <p>
-            Marchés de créateurs organisés à Ynov pour valoriser les talents
-            émergents.
-          </p>
+          <p>Marchés de créateurs pour valoriser les talents émergents.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/coupdoeil_event/" target="_blank" rel="noopener" aria-label="Instagram de Coup d'Oeil" class="footer-social__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
