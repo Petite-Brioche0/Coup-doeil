@@ -177,10 +177,12 @@ const getFeaturedArtists = () =>
     ];
 
     const imgsHTML = allImages
-      .map(
-        ({ src, alt }) =>
-          `<img src="${resolveImg(src)}" alt="${alt}" loading="lazy">`
-      )
+            .map(({ src, alt }, index) => {
+        const loading = index === 0 ? "eager" : "lazy";
+        const fetchpriority = index === 0 ? "auto" : "low";
+
+        return `<img src="${resolveImg(src)}" alt="${alt}" loading="${loading}" decoding="async" fetchpriority="${fetchpriority}">`;
+      })
       .join("");
 
     const hasMultiple = allImages.length > 1;
