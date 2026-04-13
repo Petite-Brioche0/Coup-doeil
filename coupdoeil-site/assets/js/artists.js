@@ -6,75 +6,139 @@ const ARTISTS = [
     bio: "Concept artiste et illustratrice, Leelou crée des univers colorés et expressifs mêlant personnages et émotions.",
     tags: ["concept art", "illustration"],
     link: "https://www.instagram.com/leeloush__/",
-    img: "assets/img/artists/Leelou/Leelou.jpg",
+    img: "assets/img/artists/saintValentin/Leelou/Leelou.webp",
     gallery: [
-      "assets/img/artists/Leelou/image_123650291 (2).JPG",
-      "assets/img/artists/Leelou/IMG_8532.jpeg",
+      "assets/img/artists/saintValentin/Leelou/image_123650291 (2).webp",
+      "assets/img/artists/saintValentin/Leelou/IMG_8532.webp",
     ],
   },
   {
     name: "Atelier Maple",
     category: "artisanat",
-    events: ["saint-valentin"],
+    events: ["saint-valentin", "printemps"],
     bio: "Créatrice de bougies artisanales aux parfums soigneusement composés, Atelier Maple propose des pièces uniques coulées à la main.",
     tags: ["bougies", "fait main"],
     link: "https://www.instagram.com/bougies_atelier_maple/",
-    img: "assets/img/artists/AtelierMaple/Atelier_maple.jpg",
-    gallery: [
-      "assets/img/artists/AtelierMaple/4-POST#2-JENNIFER-ATELIER MAPLE.png",
-      "assets/img/artists/AtelierMaple/4-POST#3-JENNIFER-ATELIER MAPLE.png",
-      "assets/img/artists/AtelierMaple/4-POST#4-JENNIFER-ATELIER MAPLE.png",
-      "assets/img/artists/AtelierMaple/4-POST#5-JENNIFER-ATELIER MAPLE.png",
-      "assets/img/artists/AtelierMaple/4-POST#6-JENNIFER-ATELIER MAPLE.png",
-      "assets/img/artists/AtelierMaple/4-POST#7-JENNIFER-ATELIER MAPLE.png",
-    ],
+    img: {
+      "saint-valentin": "assets/img/artists/saintValentin/AtelierMaple/Atelier_maple.webp",
+      "printemps": "assets/img/artists/Printemps/Atelier_Maple/atelier_maple.webp"
+    },
+    gallery: {
+      "saint-valentin": [
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#2-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#3-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#4-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#5-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#6-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#7-JENNIFER-ATELIER MAPLE.webp",
+      ],
+      "printemps": []
+    },
   },
   {
     name: "Aela Byrinthe",
     category: "illustration",
-    events: ["saint-valentin"],
+    events: ["saint-valentin", "printemps"],
     bio: "Illustratrice engagée, Aela Byrinthe dessine des univers sensibles et inclusifs, entre BD et illustration traditionnelle.",
     tags: ["illustration", "BD"],
     link: "https://www.instagram.com/aela.byrinthe/",
-    img: "assets/img/artists/AelaByrinthe/Aela_Byrinthe.jpg",
-    gallery: [
-      "assets/img/artists/AelaByrinthe/Aela-Byrinthe_oeuvres2.jpeg",
-      "assets/img/artists/AelaByrinthe/BD-pride_aela-byrinthe-A5.jpeg",
-    ],
+    img: {
+      "saint-valentin": "assets/img/artists/saintValentin/AelaByrinthe/Aela_Byrinthe.webp",
+      "printemps": "assets/img/artists/Printemps/Aela_Byrinthe/aela_byrinthe.webp"
+    },
+    gallery: {
+      "saint-valentin": [
+        "assets/img/artists/saintValentin/AelaByrinthe/Aela-Byrinthe_oeuvres2.webp",
+        "assets/img/artists/saintValentin/AelaByrinthe/BD-pride_aela-byrinthe-A5.webp",
+      ],
+      "printemps": []
+    },
   },
   {
     name: "Petit bout de goût",
     category: "bijoux",
-    events: ["saint-valentin"],
+    events: ["saint-valentin", "printemps"],
     bio: "Créatrice de micro-bijoux gourmands faits main en pâte polymère : colliers, boucles d'oreilles et breloques qui croquent la vie.",
     tags: ["micro-bijoux", "fait main"],
     link: "https://www.instagram.com/petit.bout.de.gout/",
-    img: "assets/img/artists/PetitBoutDeGout/Petit_bout-de-gout.jpg",
-    gallery: [
-      "assets/img/artists/PetitBoutDeGout/4-POST#2-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#3-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#4-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#5-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#6-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#7-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#8-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#9-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#10-PBDG.jpg",
-      "assets/img/artists/PetitBoutDeGout/4-POST#11-PBDG.jpg",
-    ],
+    img: {
+      "saint-valentin": "assets/img/artists/saintValentin/PetitBoutDeGout/Petit_bout-de-gout.webp",
+      "printemps": "assets/img/artists/Printemps/Petit_Bout_de_Gout1/petit_bout_de_gout.webp"
+    },
+    gallery: {
+      "saint-valentin": [
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#2-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#3-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#4-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#5-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#6-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#7-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#8-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#9-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#10-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#11-PBDG.webp",
+      ],
+      "printemps": []
+    },
   },
   {
     name: "Luzartwork",
     category: "peinture",
-    events: ["saint-valentin"],
+    events: ["saint-valentin", "printemps"],
     bio: "Peintre et illustratrice, Luzartwork réalise des toiles et prints aux couleurs vibrantes, entre aquarelle, acrylique et illustrations oniriques.",
     tags: ["peinture", "illustration"],
     link: "https://www.instagram.com/luzartwork/",
-    img: "assets/img/artists/Luzartwork/Luzartwork.jpg",
-    gallery: [
-      "assets/img/artists/Luzartwork/4-POST#2-MANON-VEROT.jpg",
-      "assets/img/artists/Luzartwork/4-POST#3-MANON-VEROT.jpg",
-    ],
+    img: {
+      "saint-valentin": "assets/img/artists/saintValentin/Luzartwork/Luzartwork.webp",
+      "printemps": "assets/img/artists/Printemps/LuzartWork/Luzartwork.webp"
+    },
+    gallery: {
+      "saint-valentin": [
+        "assets/img/artists/saintValentin/Luzartwork/4-POST#2-MANON-VEROT.webp",
+        "assets/img/artists/saintValentin/Luzartwork/4-POST#3-MANON-VEROT.webp",
+      ],
+      "printemps": []
+    },
+  },
+  {
+    name: "Bois de Faune",
+    category: "peinture",
+    events: ["printemps"],
+    bio: "Bois de Faune façonne des pièces artisanales en bois, mêlant matière brute et inspirations végétales pour des objets singuliers.",
+    tags: ["bois", "fait main"],
+    link: "https://www.instagram.com/bois_de_faune/",
+    img: "assets/img/artists/Printemps/Bois_de_Faune/Bois_de_faune.webp",
+    gallery: [],
+  },
+  {
+    name: "Manon Vaurs-Lemaître",
+    category: "illustration",
+    events: ["printemps"],
+    bio: "Illustratrice lyonnaise, Manon Vaurs-Lemaître compose des scènes douces et poétiques où la nature rencontre l'imaginaire.",
+    tags: ["illustration", "poésie"],
+    link: "https://www.instagram.com/manon.vaurs.lemaitre/",
+    img: "assets/img/artists/Printemps/Manon_Vaurs_Lemaitre/manon_vaurs_lemaitre.webp",
+    gallery: [],
+  },
+  {
+    name: "Talibri",
+    category: "illustration",
+    events: ["printemps"],
+    bio: "Talibri imagine un univers graphique singulier, entre illustrations colorées et personnages attachants.",
+    tags: ["illustration", "graphisme"],
+    link: "https://www.instagram.com/talibri_/",
+    img: "assets/img/artists/Printemps/Talibri/Talibri.webp",
+    gallery: [],
+  },
+  {
+    name: "Théa Macera",
+    category: "illustration",
+    events: ["printemps"],
+    bio: "Peintre et illustratrice, Théa Macera explore les émotions et la mémoire à travers des compositions sensibles et texturées.",
+    tags: ["peinture", "illustration"],
+    link: "https://www.instagram.com/thea.macera/",
+    img: "assets/img/artists/Printemps/Thea_Macera/Thea_macera.webp",
+    gallery: [],
   },
 ];
 
@@ -93,7 +157,6 @@ const getFeaturedArtists = () =>
     ARTISTS.find((artist) => artist.name === artistName)
   ).filter(Boolean);
 
-
 (() => {
   const sanitize = (text) => text.replace(/[<>]/g, "");
 
@@ -102,10 +165,12 @@ const getFeaturedArtists = () =>
   const resolveImg = (img) =>
     basePath + img.replace(/#/g, "%23").replace(/ /g, "%20");
 
-  const buildCarouselHTML = (artist) => {
+  const buildCarouselHTML = (artist, event = null) => {
+    const imgSrc = typeof artist.img === 'object' ? artist.img[event] || artist.img['saint-valentin'] : artist.img;
+    const gallery = typeof artist.gallery === 'object' ? artist.gallery[event] || artist.gallery['saint-valentin'] || [] : artist.gallery || [];
     const allImages = [
-      { src: artist.img, alt: `Portrait de ${sanitize(artist.name)}` },
-      ...(artist.gallery || []).map((src, i) => ({
+      { src: imgSrc, alt: `Portrait de ${sanitize(artist.name)}` },
+      ...gallery.map((src, i) => ({
         src,
         alt: `Oeuvre ${i + 1} de ${sanitize(artist.name)}`,
       })),
@@ -182,7 +247,7 @@ const getFeaturedArtists = () =>
     return wrapper;
   };
 
-  const renderArtists = (list) => {
+  const renderArtists = (list, event = null) => {
     const container = document.querySelector("[data-artists]");
     if (!container) return;
     container.innerHTML = "";
@@ -194,7 +259,7 @@ const getFeaturedArtists = () =>
       const card = document.createElement("article");
       card.className = "card artist-card";
       card.innerHTML = `
-        ${buildCarouselHTML(artist)}
+        ${buildCarouselHTML(artist, event)}
         <h3>${sanitize(artist.name)}</h3>
         <div class="artist-meta">
           <span class="badge">${sanitize(artist.category)}</span>
@@ -230,7 +295,7 @@ const getFeaturedArtists = () =>
         const matchesQuery = content.includes(query);
         return matchesCat && matchesEvent && matchesQuery;
       });
-      renderArtists(getArtistsSortedByName(filtered));
+      renderArtists(getArtistsSortedByName(filtered), currentEvent);
     };
     categoryButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -259,24 +324,43 @@ const getFeaturedArtists = () =>
     const container = document.querySelector("[data-featured-artists]");
     if (!container) return;
 
-    const featured = getFeaturedArtists()
+    const featured = getFeaturedArtists();
     container.innerHTML = "";
 
+    const isEditorial = container.classList.contains("ed-gallery");
+
     featured.forEach((artist) => {
-      const card = document.createElement("div");
-      card.className = "card artist-card";
-      card.innerHTML = `
-        ${buildCarouselHTML(artist)}
-        <h3>${sanitize(artist.name)}</h3>
-        <div class="artist-meta">
-          <span class="badge">${sanitize(artist.category)}</span>
-          <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
-        </div>
-        <p>${sanitize(artist.bio)}</p>
-        <div class="tags">${artist.tags.slice(0, 2).map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
-      `;
-      initCarousel(card);
-      container.appendChild(card);
+      if (isEditorial) {
+        const imgSrc = typeof artist.img === 'object' ? artist.img['printemps'] || artist.img['saint-valentin'] : artist.img;
+        const item = document.createElement("a");
+        item.className = "ed-gallery__item";
+        item.href = sanitize(artist.link);
+        item.target = "_blank";
+        item.rel = "noopener";
+        item.innerHTML = `
+          <div class="ed-gallery__media">
+            <img src="${resolveImg(imgSrc)}" alt="${sanitize(artist.name)}" loading="lazy" />
+          </div>
+          <p class="ed-gallery__cat">${sanitize(artist.category)}</p>
+          <h3 class="ed-gallery__name">${sanitize(artist.name)}</h3>
+        `;
+        container.appendChild(item);
+      } else {
+        const card = document.createElement("div");
+        card.className = "card artist-card";
+        card.innerHTML = `
+          ${buildCarouselHTML(artist, 'printemps')}
+          <h3>${sanitize(artist.name)}</h3>
+          <div class="artist-meta">
+            <span class="badge">${sanitize(artist.category)}</span>
+            <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
+          </div>
+          <p>${sanitize(artist.bio)}</p>
+          <div class="tags">${artist.tags.slice(0, 2).map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
+        `;
+        initCarousel(card);
+        container.appendChild(card);
+      }
     });
   };
 
@@ -284,22 +368,46 @@ const getFeaturedArtists = () =>
     const container = document.querySelector("[data-edition-artists]");
     if (!container) return;
 
+    const editionFilter = container.getAttribute("data-edition-artists");
+    const list = editionFilter
+      ? ARTISTS.filter((a) => (a.events || []).includes(editionFilter))
+      : ARTISTS;
+
+    const isEditorial = container.classList.contains("ed-gallery");
+
     container.innerHTML = "";
-    getArtistsSortedByName(ARTISTS).forEach((artist) => {
-      const card = document.createElement("article");
-      card.className = "card artist-card";
-      card.innerHTML = `
-        ${buildCarouselHTML(artist)}
-        <h3>${sanitize(artist.name)}</h3>
-        <div class="artist-meta">
-          <span class="badge">${sanitize(artist.category)}</span>
-          <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
-        </div>
-        <p>${sanitize(artist.bio)}</p>
-        <div class="tags">${artist.tags.map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
-      `;
-      initCarousel(card);
-      container.appendChild(card);
+    getArtistsSortedByName(list).forEach((artist) => {
+      if (isEditorial) {
+        const imgSrc = typeof artist.img === 'object' ? artist.img[editionFilter] || artist.img['saint-valentin'] : artist.img;
+        const item = document.createElement("a");
+        item.className = "ed-gallery__item";
+        item.href = sanitize(artist.link);
+        item.target = "_blank";
+        item.rel = "noopener";
+        item.innerHTML = `
+          <div class="ed-gallery__media">
+            <img src="${resolveImg(imgSrc)}" alt="${sanitize(artist.name)}" loading="lazy" />
+          </div>
+          <p class="ed-gallery__cat">${sanitize(artist.category)}</p>
+          <h3 class="ed-gallery__name">${sanitize(artist.name)}</h3>
+        `;
+        container.appendChild(item);
+      } else {
+        const card = document.createElement("article");
+        card.className = "card artist-card";
+        card.innerHTML = `
+          ${buildCarouselHTML(artist, editionFilter)}
+          <h3>${sanitize(artist.name)}</h3>
+          <div class="artist-meta">
+            <span class="badge">${sanitize(artist.category)}</span>
+            <a class="instagram-link" href="${sanitize(artist.link)}" target="_blank" rel="noopener" aria-label="Instagram de ${sanitize(artist.name)}">${INSTAGRAM_ICON}</a>
+          </div>
+          <p>${sanitize(artist.bio)}</p>
+          <div class="tags">${artist.tags.map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}</div>
+        `;
+        initCarousel(card);
+        container.appendChild(card);
+      }
     });
   };
 

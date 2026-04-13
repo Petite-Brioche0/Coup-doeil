@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="light" data-edition="printemps">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Édition Saint-Valentin – Coup d'Oeil</title>
+    <title>Édition Printemps – Coup d'Oeil</title>
     <meta
       name="description"
-      content="Édition Printemps Coup d'Oeil : L’Amour avec un grand A, 7 artistes lyonnais, créations 100 % faites main, entrée gratuite."
+      content="Marché des Créateurs #2 — Dimanche 19 avril 2026 à Güstavo Lyon. Artistes lyonnais, créations de printemps, sans IA. Entrée libre."
     />
     <meta property="og:title" content="Édition Printemps – Coup d'Oeil" />
-    <meta property="og:description" content="L'Amour avec un grand A : 7 artistes lyonnais, 100 % fait main, entrée gratuite au Coin Café Lyon 7." />
+    <meta property="og:description" content="Dimanche 19 avril 2026 — Marché des Créateurs #2 à Güstavo Lyon. Artistes lyonnais, créations de printemps, sans IA. Entrée libre." />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/forms.css" />
     <link rel="icon" href="../assets/img/logo/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />
@@ -19,192 +19,135 @@
     <header>
       <div class="navbar" role="navigation" aria-label="Navigation principale">
         <a class="logo" href="../index.html">
-          <img
-            src="../assets/img/logo/nobg_logo_light.png"
-            alt="Logo Coup d'Oeil"
-            class="logo-img logo-img--light"
-            decoding="async"
-          />
-          <img
-            src="../assets/img/logo/nobg_logo_dark.png"
-            alt=""
-            class="logo-img logo-img--dark"
-            aria-hidden="true"
-            decoding="async"
-          />
+          <img src="../assets/img/logo/nobg_logo_light.webp" alt="Logo Coup d'Oeil" class="logo-img logo-img--light" decoding="async" />
+          <img src="../assets/img/logo/nobg_logo_dark.webp" alt="" class="logo-img logo-img--dark" aria-hidden="true" decoding="async" />
           <span class="sr-only">Coup d'Oeil</span>
         </a>
         <nav>
           <ul class="nav-links">
             <li><a data-page="index.html" href="../index.html">Accueil</a></li>
-            <li>
-              <a data-page="pages/events.html" href="events.html"
-                >Nos marchés</a
-              >
-            </li>
-            <li>
-              <a data-page="pages/artists.html" href="artists.html"
-                >Nos artistes</a
-              >
-            </li>
-            <li>
-              <a data-page="pages/about.html" href="about.html">À propos</a>
-            </li>
+            <li><a data-page="pages/events.html" href="events.html">Nos marchés</a></li>
+            <li><a data-page="pages/artists.html" href="artists.html">Nos artistes</a></li>
+            <li><a data-page="pages/about.html" href="about.html">À propos</a></li>
           </ul>
         </nav>
         <div class="nav-actions">
           <a class="nav-contact-btn" href="contact.html">Contact</a>
-          <button
-            class="theme-toggle"
-            type="button"
-            data-theme-toggle
-            aria-pressed="false"
-            aria-label="Basculer le thème"
-          >
-            <img
-              src="../assets/img/logo/light_dark.png"
-              alt=""
-              class="theme-toggle__icon"
-              aria-hidden="true"
-              decoding="async"
-            />
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Basculer le thème">
+            <img src="../assets/img/logo/light_dark.webp" alt="" class="theme-toggle__icon" aria-hidden="true" decoding="async" />
+          </button>
+          <button class="nav-burger" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-nav-toggle>
+            <span class="nav-burger__line"></span>
           </button>
         </div>
       </div>
     </header>
+
     <main id="contenu">
-      <section class="section">
-        <div class="section-header">
-          <div>
-            <h1>Édition Saint-Valentin</h1>
-            <p class="section-subtitle">
-              L'Amour avec un grand A&nbsp;: un marché de créateurs lyonnais
-              qui a mis en lumière les liens et les émotions.
-            </p>
-          </div>
-          <span class="badge">Terminé</span>
+
+      <!-- L'ÉDITION : split (image / texte) -->
+      <section class="split" id="infos">
+        <div class="split__media">
+          <img src="../assets/img/event/Printemps/Gustavo2.webp" alt="Affiche Marché des Créateurs #2" loading="lazy" />
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Objectif &amp; valeurs</h3>
-            <p>
-              Ce rendez-vous a célébré l'amour sous toutes ses formes — amis,
-              couple, soi, famille — et a mis en avant 7 artistes lyonnais.
-              Tout était fait main avec un engagement clair&nbsp;: zéro IA.
-            </p>
-            <p>
-              L'événement était porté par l'association RONDS &amp; COULEURS, dont
-              la mission est de valoriser toutes les formes d'art.
-            </p>
-            <ul class="hero-points">
-              <li><strong>Thème&nbsp;:</strong> L'amour avec un grand A.</li>
-              <li>
-                <strong>Engagement&nbsp;:</strong> 7 artistes locaux, 100&nbsp;%
-                fait main.
-              </li>
-              <li><strong>Accès&nbsp;:</strong> Ouvert à toutes et tous, entrée gratuite.</li>
-            </ul>
-            <h3>Infos pratiques</h3>
-            <ul class="hero-points">
-              <li><strong>Date&nbsp;:</strong> 7 février 2026.</li>
-              <li><strong>Horaires&nbsp;:</strong> 9h30 – 18h00.</li>
-              <li>
-                <strong>Lieu&nbsp;:</strong> Coin Café, 5 Cours de la Liberté,
-                Lyon 7.
-              </li>
-            </ul>
-            <h3>Bilan du marché</h3>
-            <p>
-              Cette première édition a été un vrai succès avec
-              <strong>282 visiteurs</strong> venus découvrir les créations de
-              nos artistes lyonnais. Merci à toutes et tous pour votre
-              présence et votre soutien&nbsp;!
-            </p>
-          </article>
-          <article class="card card--img">
-            <img
-              src="../assets/img/event/printemps/coupdoeuil-done-9.jpg"
-              alt="Ambiance de l'édition Printemps"
-              class="event-photo event-photo--hero"
-              loading="lazy"
-            />
-          </article>
+        <div class="split__content">
+          <p class="split__kicker">Édition n°02 — À venir</p>
+          <h2 class="split__title">Le printemps,<br>fait main.</h2>
+          <p class="split__date">19.04.2026 <span></span> 10h — 18h</p>
+          <p class="split__text">
+            Pour notre deuxième édition, on prend racine à Güstavo, en plein cœur du 7ᵉ. Une journée entière dédiée aux créateur·rices lyonnais·es&nbsp;: illustration, peinture, bijoux, bois, bougies — tout ce qui pousse en saison. Ateliers, boutures à emporter, boissons et snacking sur place.
+          </p>
+          <a class="split__cta" href="contact.html">Nous contacter</a>
         </div>
       </section>
-      <section class="section">
-        <div class="section-header">
+
+      <!-- INFOS — liste éditoriale -->
+      <section class="ed-section">
+        <div class="ed-section__head">
+          <p class="ed-section__kicker">Infos pratiques</p>
           <div>
-            <h2>Le lieu</h2>
-            <p class="section-subtitle">
-              Coin Café a accueilli l'édition Saint-Valentin au cœur de Lyon 7.
+            <h2 class="ed-section__title">Tout ce qu'il faut<br>savoir.</h2>
+            <p class="ed-section__intro">
+              Une seule journée, un seul lieu, et tout l'univers Coup d'Oeil dans une ambiance printanière.
             </p>
           </div>
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Photos du Coin Café</h3>
-            <div class="venue-carousel" data-venue-carousel>
-              <div class="venue-track">
-                <div class="venue-slide venue-slide--pair">
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-24.jpg" alt="Coin Café – ambiance pendant l'événement" loading="lazy" />
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-2.jpg" alt="Coin Café – intérieur pendant l'événement" loading="lazy" />
-                </div>
-                <div class="venue-slide venue-slide--single">
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-15.jpg" alt="Coin Café – vue de la salle" loading="lazy" />
-                </div>
-                <div class="venue-slide venue-slide--single">
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-23.jpg" alt="Coin Café – ambiance du marché" loading="lazy" />
-                </div>
-                <div class="venue-slide venue-slide--single">
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-3.jpg" alt="Coin Café – créations exposées" loading="lazy" />
-                </div>
-                <div class="venue-slide venue-slide--single">
-                  <img src="../assets/img/event/printemps/coupdoeuil-done-8.jpg" alt="Coin Café – visiteurs" loading="lazy" />
-                </div>
-              </div>
-              <button class="carousel-btn carousel-btn--prev" aria-label="Slide précédente">&#8249;</button>
-              <button class="carousel-btn carousel-btn--next" aria-label="Slide suivante">&#8250;</button>
-              <div class="carousel-dots">
-                <span class="carousel-dot active"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-                <span class="carousel-dot"></span>
-              </div>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Localisation</h3>
-            <iframe
-              class="map-embed"
-              title="Localisation du Coin Café à Lyon 7"
-              src="https://www.google.com/maps?q=Coin%20Caf%C3%A9%2C%205%20Cours%20de%20la%20Libert%C3%A9%2C%20Lyon%207&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <p class="muted">
-              Adresse&nbsp;: 5 Cours de la Liberté, Lyon 7.
-            </p>
-          </article>
+        <div class="ed-list">
+          <div class="ed-list__item">
+            <div class="ed-list__num">Quand</div>
+            <h3 class="ed-list__title">Dimanche 19 avril 2026.</h3>
+            <p class="ed-list__text">De 10h à 18h, en continu. Entrée libre toute la journée — pas besoin de réserver.</p>
+          </div>
+          <div class="ed-list__item">
+            <div class="ed-list__num">Où</div>
+            <h3 class="ed-list__title">Güstavo, Lyon 7.</h3>
+            <p class="ed-list__text">35 Rue Pasteur, 69007 Lyon. Métro Guillotière ou Saxe-Gambetta, à 10 minutes de Bellecour à pied.</p>
+          </div>
+          <div class="ed-list__item">
+            <div class="ed-list__num">Quoi</div>
+            <h3 class="ed-list__title">Marché, ateliers, boutures.</h3>
+            <p class="ed-list__text">Une sélection d'artistes lyonnais, des ateliers participatifs, un coin snacking & boissons, et des boutures à ramener à la maison.</p>
+          </div>
+          <div class="ed-list__item">
+            <div class="ed-list__num">Combien</div>
+            <h3 class="ed-list__title">Gratuit, pour tout le monde.</h3>
+            <p class="ed-list__text">L'entrée est libre. Le stand est offert aux artistes. Aucune commission n'est prélevée sur les ventes.</p>
+          </div>
         </div>
       </section>
-      <section class="section">
-        <div class="section-header">
+
+      <!-- LIEU — feature banner -->
+      <a class="feature-banner" href="https://www.google.com/maps?q=35+Rue+Pasteur,+69007+Lyon" target="_blank" rel="noopener" aria-label="Voir Güstavo sur Google Maps">
+        <img src="../assets/img/event/Printemps/Gustavo1.webp" alt="" class="feature-banner__bg" aria-hidden="true" loading="lazy" />
+        <div class="feature-banner__content">
           <div>
-            <h2>Les artistes présents</h2>
-            <p class="section-subtitle">
-              Voici les artistes qui ont présenté leurs créations faites main
-              lors de cette première édition.
+            <p class="feature-banner__kicker">Le lieu</p>
+            <h2 class="feature-banner__title">Güstavo,<br>Lyon 7.</h2>
+          </div>
+          <dl class="feature-banner__meta">
+            <dt>Adresse</dt><dd>35 Rue Pasteur</dd>
+            <dt>Quartier</dt><dd>Lyon 7ᵉ</dd>
+            <dt>Accès</dt><dd>Métro Guillotière</dd>
+          </dl>
+        </div>
+      </a>
+
+      <!-- ARTISTES — galerie scroll horizontal -->
+      <section class="ed-section" id="artistes">
+        <div class="ed-section__head">
+          <p class="ed-section__kicker">Artistes présents</p>
+          <div>
+            <h2 class="ed-section__title">Une scène<br>en floraison.</h2>
+            <p class="ed-section__intro">
+              Neuf créateur·rices lyonnais·es réuni·es pour cette édition. Faites défiler pour les découvrir, cliquez pour voir leur Instagram.
             </p>
           </div>
         </div>
-        <div class="card-grid" data-edition-artists></div>
+        <div class="ed-gallery" data-edition-artists="printemps"></div>
       </section>
+
+      <!-- CARTE -->
+      <section class="ed-section">
+        <div class="ed-section__head">
+          <p class="ed-section__kicker">S'y rendre</p>
+          <h2 class="ed-section__title">35 Rue Pasteur,<br>Lyon 7.</h2>
+        </div>
+        <iframe
+          class="map-embed"
+          title="Localisation de Güstavo à Lyon 7"
+          src="https://www.google.com/maps?q=35%20Rue%20Pasteur%2C%2069007%20Lyon&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="width:100%; min-height:60vh; border:0; display:block;"
+        ></iframe>
+      </section>
+
     </main>
+
     <footer>
       <div class="footer-content">
         <div>
-          <img src="../assets/img/logo/nobg_logo_light.png" alt="Coup d'Oeil" class="footer-logo" />
+          <img src="../assets/img/logo/nobg_logo_light.webp" alt="Coup d'Oeil" class="footer-logo" />
           <p>Marchés de créateurs pour valoriser les talents émergents.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/coupdoeil_event/" target="_blank" rel="noopener" aria-label="Instagram de Coup d'Oeil" class="footer-social__link">
@@ -232,22 +175,15 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="contact.html">Écrire à l'équipe</a></li>
-            <li>
-              <a href="mailto:eventcoupdoeil@gmail.com"
-                >eventcoupdoeil@gmail.com</a
-              >
-            </li>
+            <li><a href="mailto:eventcoupdoeil@gmail.com">eventcoupdoeil@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">© 2026 Coup d'Oeil · Événement.</div>
     </footer>
+
     <div class="cookie-banner" role="dialog" aria-label="Bandeau cookies">
-      <p>
-        Nous utilisons des cookies techniques pour le bon fonctionnement du site
-        et une mesure d'audience locale. Vous pouvez refuser ces cookies non
-        essentiels.
-      </p>
+      <p>Nous utilisons des cookies techniques pour le bon fonctionnement du site et une mesure d'audience locale. Vous pouvez refuser ces cookies non essentiels.</p>
       <div class="cookie-actions">
         <button class="btn" data-action="accept">Accepter</button>
         <button class="btn secondary" data-action="deny">Refuser</button>

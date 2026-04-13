@@ -175,11 +175,7 @@ textarea.is-valid {
 }
 
 .registration-toggle__btn.is-active {
-  background: linear-gradient(
-    120deg,
-    var(--color-primary),
-    color-mix(in srgb, var(--color-secondary) 36%, var(--color-primary))
-  );
+  background: #F3BB00;
   color: var(--color-on-primary);
   box-shadow: var(--shadow-soft);
   transform: translateY(-1px);

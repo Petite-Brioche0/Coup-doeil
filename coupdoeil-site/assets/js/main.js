@@ -128,6 +128,13 @@
       const progress = Math.min(window.scrollY / fadeDistance, 1);
       const opacity = Math.max(1 - progress, 0);
       banner.style.setProperty("--hero-opacity", opacity.toFixed(3));
+
+      // Hide scroll indicator after scrolling starts
+      const cue = banner.querySelector(".scroll-indicator, .hero-scroll-cue");
+      if (cue) {
+        cue.style.opacity = Math.max(1 - progress * 3, 0).toFixed(3);
+      }
+
       ticking = false;
     };
 
@@ -146,6 +153,109 @@
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
     updateFade();
+  };
+
+  const initScrollHint = () => {
+    const target = document.querySelector("[data-scroll-hint]");
+    if (!target) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let killed = false;
+    let timer = null;
+    const HINT_DISTANCE = 40; // px de descente
+    const HINT_DURATION = 900; // ms aller-retour
+    const HINT_INTERVAL = 3200; // ms entre chaque hint
+    const FIRST_DELAY = 1800; // ms avant le premier hint
+
+    const easeInOut = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+    const animateBounce = () => {
+      if (killed || window.scrollY > 5) return;
+      const start = performance.now();
+      const step = (now) => {
+        if (killed) return;
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / HINT_DURATION, 1);
+        // aller (0 → 0.5) puis retour (0.5 → 1)
+        const phase = progress < 0.5 ? easeInOut(progress * 2) : easeInOut((1 - progress) * 2);
+        const y = phase * HINT_DISTANCE;
+        window.scrollTo({ top: y, behavior: "instant" in window ? "instant" : "auto" });
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          window.scrollTo({ top: 0 });
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
+    const scheduleNext = () => {
+      if (killed) return;
+      timer = setTimeout(() => {
+        animateBounce();
+        scheduleNext();
+      }, HINT_INTERVAL);
+    };
+
+    const kill = () => {
+      if (killed) return;
+      killed = true;
+      clearTimeout(timer);
+      window.removeEventListener("wheel", killOnUser, { passive: true });
+      window.removeEventListener("touchstart", killOnUser, { passive: true });
+      window.removeEventListener("keydown", killOnKey);
+      window.removeEventListener("pointerdown", killOnUser, { passive: true });
+    };
+
+    const killOnUser = () => kill();
+    const killOnKey = (e) => {
+      const keys = ["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Space", " ", "End", "Home"];
+      if (keys.includes(e.key)) kill();
+    };
+
+    window.addEventListener("wheel", killOnUser, { passive: true });
+    window.addEventListener("touchstart", killOnUser, { passive: true });
+    window.addEventListener("pointerdown", killOnUser, { passive: true });
+    window.addEventListener("keydown", killOnKey);
+
+    // premier hint après un délai
+    setTimeout(() => {
+      animateBounce();
+      scheduleNext();
+    }, FIRST_DELAY);
+  };
+
+  const initHeaderScroll = () => {
+    const header = document.querySelector("header");
+    const banner = document.querySelector("[data-hero-banner]");
+    if (!header) return;
+
+    // If no hero banner, show header immediately
+    if (!banner) {
+      header.classList.add("header--visible");
+      return;
+    }
+
+    let ticking = false;
+    const updateHeader = () => {
+      const bannerBottom = banner.offsetHeight * 0.7;
+      if (window.scrollY > bannerBottom) {
+        header.classList.add("header--visible");
+      } else {
+        header.classList.remove("header--visible");
+      }
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    updateHeader();
   };
 
   const initImagePerformance = () => {
@@ -275,6 +385,42 @@
     resetAuto();
   };
 
+  const initMobileNav = () => {
+    const burger = document.querySelector("[data-nav-toggle]");
+    const navbar = document.querySelector(".navbar");
+    const nav = document.querySelector("header nav");
+    if (!burger || !nav || !navbar) return;
+
+    const toggle = (open) => {
+      const isOpen = typeof open === "boolean" ? open : !nav.classList.contains("nav--open");
+      nav.classList.toggle("nav--open", isOpen);
+      navbar.classList.toggle("navbar--open", isOpen);
+      burger.setAttribute("aria-expanded", String(isOpen));
+      burger.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+    };
+
+    burger.addEventListener("click", () => toggle());
+
+    // Close on nav link click
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => toggle(false));
+    });
+
+    // Close on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("nav--open")) {
+        toggle(false);
+        burger.focus();
+      }
+    });
+
+    // Close if viewport becomes wider than breakpoint
+    const mq = window.matchMedia("(min-width: 901px)");
+    mq.addEventListener("change", (e) => {
+      if (e.matches) toggle(false);
+    });
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     setActiveNav();
     initTheme();
@@ -282,7 +428,10 @@
     initCookiesReset();
     initNewsletter();
     initHeroBannerFade();
+    initHeaderScroll();
+    initScrollHint();
     initImagePerformance();
     initHeroCarousel();
+    initMobileNav();
   });
 })();

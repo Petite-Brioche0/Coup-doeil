@@ -3,12 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marché – Coup d'Oeil</title>
-    <meta
-      name="description"
-      content="Calendrier des éditions Coup d'Oeil : marché de Noël, édition printemps et rendez-vous final."
-    />
-    <meta property="og:title" content="Éditions – Coup d'Oeil" />
+    <title>Nos marchés – Coup d'Oeil</title>
+    <meta name="description" content="Calendrier des éditions Coup d'Oeil : marchés de créateurs à Lyon, entrée libre." />
+    <meta property="og:title" content="Nos marchés – Coup d'Oeil" />
     <meta property="og:description" content="Plusieurs rendez-vous à Lyon en 2026 : marchés de créateurs en accès libre." />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/forms.css" />
@@ -19,136 +16,68 @@
     <header>
       <div class="navbar" role="navigation" aria-label="Navigation principale">
         <a class="logo" href="../index.html">
-          <img
-            src="../assets/img/logo/nobg_logo_light.png"
-            alt="Logo Coup d'Oeil"
-            class="logo-img logo-img--light"
-            decoding="async"
-          />
-          <img
-            src="../assets/img/logo/nobg_logo_dark.png"
-            alt=""
-            class="logo-img logo-img--dark"
-            aria-hidden="true"
-            decoding="async"
-          />
+          <img src="../assets/img/logo/nobg_logo_light.webp" alt="Logo Coup d'Oeil" class="logo-img logo-img--light" decoding="async" />
+          <img src="../assets/img/logo/nobg_logo_dark.webp" alt="" class="logo-img logo-img--dark" aria-hidden="true" decoding="async" />
           <span class="sr-only">Coup d'Oeil</span>
         </a>
         <nav>
           <ul class="nav-links">
             <li><a data-page="index.html" href="../index.html">Accueil</a></li>
-            <li>
-              <a data-page="pages/events.html" href="events.html"
-                >Nos marchés</a
-              >
-            </li>
-            <li>
-              <a data-page="pages/artists.html" href="artists.html"
-                >Nos artistes</a
-              >
-            </li>
-            <li>
-              <a data-page="pages/about.html" href="about.html">À propos</a>
-            </li>
+            <li><a data-page="pages/events.html" href="events.html">Nos marchés</a></li>
+            <li><a data-page="pages/artists.html" href="artists.html">Nos artistes</a></li>
+            <li><a data-page="pages/about.html" href="about.html">À propos</a></li>
           </ul>
         </nav>
         <div class="nav-actions">
           <a class="nav-contact-btn" href="contact.html">Contact</a>
-          <button
-            class="theme-toggle"
-            type="button"
-            data-theme-toggle
-            aria-pressed="false"
-            aria-label="Basculer le thème"
-          >
-            <img
-              src="../assets/img/logo/light_dark.png"
-              alt=""
-              class="theme-toggle__icon"
-              aria-hidden="true"
-              decoding="async"
-            />
+          <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Basculer le thème">
+            <img src="../assets/img/logo/light_dark.webp" alt="" class="theme-toggle__icon" aria-hidden="true" decoding="async" />
+          </button>
+          <button class="nav-burger" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-nav-toggle>
+            <span class="nav-burger__line"></span>
           </button>
         </div>
       </div>
     </header>
+
     <main id="contenu">
-      <section class="hero-events-banner" data-hero-carousel aria-label="Photos de nos marchés">
-        <div class="hero-carousel-track">
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-10.jpg" alt="Édition Saint-Valentin 2026 – ambiance du marché" loading="eager" />
+      <section class="editions-split" aria-label="Nos éditions">
+
+        <!-- ── CÔTÉ SAINT-VALENTIN ── -->
+        <a class="edition-panel edition-panel--sv" href="edition-saint-valentin.html">
+          <img src="../assets/img/event/saintValentin/coupdoeuil-done-10.webp" alt="" class="edition-panel__bg" aria-hidden="true" />
+          <div class="edition-panel__content">
+            <p class="edition-panel__kicker">Édition n°01 · Terminée</p>
+            <h2 class="edition-panel__title">Saint-<br>Valentin.</h2>
+            <dl class="edition-panel__meta">
+              <dt>Date</dt><dd>07.02.2026</dd>
+              <dt>Lieu</dt><dd>Coin Café, Lyon 7</dd>
+            </dl>
+            <span class="edition-panel__cta">Voir le récap</span>
           </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-24.jpg" alt="Édition Saint-Valentin 2026 – tables des artistes" loading="lazy" />
+        </a>
+
+        <!-- ── CÔTÉ PRINTEMPS ── -->
+        <a class="edition-panel edition-panel--pr" href="edition-printemps.html">
+          <img src="../assets/img/event/Printemps/Gustavo2.webp" alt="" class="edition-panel__bg" aria-hidden="true" />
+          <div class="edition-panel__content">
+            <p class="edition-panel__kicker">Édition n°02 · À venir</p>
+            <h2 class="edition-panel__title">Prin-<br>temps.</h2>
+            <dl class="edition-panel__meta">
+              <dt>Date</dt><dd>19.04.2026</dd>
+              <dt>Lieu</dt><dd>Güstavo, Lyon 7</dd>
+            </dl>
+            <span class="edition-panel__cta">Voir l'événement</span>
           </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-2.jpg" alt="Édition Saint-Valentin 2026 – créations exposées" loading="lazy" />
-          </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-15.jpg" alt="Édition Saint-Valentin 2026 – visiteurs" loading="lazy" />
-          </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-3.jpg" alt="Édition Saint-Valentin 2026 – artisanat fait main" loading="lazy" />
-          </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-8.jpg" alt="Édition Saint-Valentin 2026 – public présent" loading="lazy" />
-          </div>
-          <div class="hero-carousel-slide">
-            <img src="../assets/img/event/printemps/coupdoeuil-done-23.jpg" alt="Édition Saint-Valentin 2026 – stands créateurs" loading="lazy" />
-          </div>
-        </div>
-        <div class="hero-carousel-overlay" aria-hidden="true"></div>
-        <div class="hero-carousel-content">
-          <p class="hero-carousel-label">Marchés de créateurs · Lyon · Entrée libre</p>
-          <h1>Nos éditions</h1>
-          <p class="hero-carousel-desc">
-            Plusieurs rendez-vous rythment l'année 2026, tous à Lyon et en accès libre. Une scène ouverte aux créateur·rices, aux curieux·ses et aux passionné·es d'artisanat.
-          </p>
-          <div class="hero-actions">
-            <a href="#planning" class="btn">Voir les dates</a>
-            <a href="contact.html" class="btn secondary">Participer en tant qu'artiste</a>
-          </div>
-        </div>
-        <button class="carousel-btn carousel-btn--prev" aria-label="Image précédente">&#8249;</button>
-        <button class="carousel-btn carousel-btn--next" aria-label="Image suivante">&#8250;</button>
-        <div class="carousel-dots" aria-hidden="true">
-          <span class="carousel-dot active"></span>
-          <span class="carousel-dot"></span>
-          <span class="carousel-dot"></span>
-          <span class="carousel-dot"></span>
-          <span class="carousel-dot"></span>
-          <span class="carousel-dot"></span>
-          <span class="carousel-dot"></span>
-        </div>
-      </section>
-      <section class="section" id="planning">
-        <div class="section-header">
-          <h2>Planning et intentions</h2>
-        </div>
-        <div class="timeline">
-          <a class="card step" href="edition-printemps.html">
-            <h3>Édition Saint-Valentin</h3>
-            <p class="muted">7 février 2026 · <span class="badge">Terminé</span></p>
-            <p>
-              Thème « L'Amour avec un grand A » : 7 artistes lyonnais, 100 % fait
-              main, zéro IA. Organisé au Coin Café, Lyon 7.
-            </p>
-            <p><strong>Récapitulatif et photos</strong></p>
-          </a>
-          <div class="card step">
-            <h3>Édition Printemps</h3>
-            <p class="muted">Dimanche 19 avril 2026 · <span class="badge">À venir</span></p>
-            <p>
-              Grand marché de clôture. Plus d'informations prochainement sur les artistes participants.
-            </p>
-          </div>
-        </div>
+        </a>
+
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
         <div>
-          <img src="../assets/img/logo/nobg_logo_light.png" alt="Coup d'Oeil" class="footer-logo" />
+          <img src="../assets/img/logo/nobg_logo_light.webp" alt="Coup d'Oeil" class="footer-logo" />
           <p>Marchés de créateurs pour valoriser les talents émergents.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/coupdoeil_event/" target="_blank" rel="noopener" aria-label="Instagram de Coup d'Oeil" class="footer-social__link">
@@ -176,22 +105,14 @@
           <h4>Contact</h4>
           <ul>
             <li><a href="contact.html">Écrire à l'équipe</a></li>
-            <li>
-              <a href="mailto:eventcoupdoeil@gmail.com"
-                >eventcoupdoeil@gmail.com</a
-              >
-            </li>
+            <li><a href="mailto:eventcoupdoeil@gmail.com">eventcoupdoeil@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">© 2026 Coup d'Oeil · Événement.</div>
     </footer>
     <div class="cookie-banner" role="dialog" aria-label="Bandeau cookies">
-      <p>
-        Nous utilisons des cookies techniques pour le bon fonctionnement du site
-        et une mesure d'audience locale. Vous pouvez refuser ces cookies non
-        essentiels.
-      </p>
+      <p>Nous utilisons des cookies techniques pour le bon fonctionnement du site et une mesure d'audience locale. Vous pouvez refuser ces cookies non essentiels.</p>
       <div class="cookie-actions">
         <button class="btn" data-action="accept">Accepter</button>
         <button class="btn secondary" data-action="deny">Refuser</button>
