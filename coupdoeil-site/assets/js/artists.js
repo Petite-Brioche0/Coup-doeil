@@ -6,10 +6,10 @@ const ARTISTS = [
     bio: "Concept artiste et illustratrice, Leelou crée des univers colorés et expressifs mêlant personnages et émotions.",
     tags: ["concept art", "illustration"],
     link: "https://www.instagram.com/leeloush__/",
-    img: "assets/img/artists/saintValentin/Leelou/Leelou.jpg",
+    img: "assets/img/artists/saintValentin/Leelou/Leelou.webp",
     gallery: [
-      "assets/img/artists/saintValentin/Leelou/image_123650291 (2).JPG",
-      "assets/img/artists/saintValentin/Leelou/IMG_8532.jpeg",
+      "assets/img/artists/saintValentin/Leelou/image_123650291 (2).webp",
+      "assets/img/artists/saintValentin/Leelou/IMG_8532.webp",
     ],
   },
   {
@@ -20,17 +20,17 @@ const ARTISTS = [
     tags: ["bougies", "fait main"],
     link: "https://www.instagram.com/bougies_atelier_maple/",
     img: {
-      "saint-valentin": "assets/img/artists/saintValentin/AtelierMaple/Atelier_maple.jpg",
-      "printemps": "assets/img/artists/Printemps/Atelier_Maple/atelier_maple.jpg"
+      "saint-valentin": "assets/img/artists/saintValentin/AtelierMaple/Atelier_maple.webp",
+      "printemps": "assets/img/artists/Printemps/Atelier_Maple/atelier_maple.webp"
     },
     gallery: {
       "saint-valentin": [
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#2-JENNIFER-ATELIER MAPLE.png",
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#3-JENNIFER-ATELIER MAPLE.png",
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#4-JENNIFER-ATELIER MAPLE.png",
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#5-JENNIFER-ATELIER MAPLE.png",
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#6-JENNIFER-ATELIER MAPLE.png",
-        "assets/img/artists/saintValentin/AtelierMaple/4-POST#7-JENNIFER-ATELIER MAPLE.png",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#2-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#3-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#4-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#5-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#6-JENNIFER-ATELIER MAPLE.webp",
+        "assets/img/artists/saintValentin/AtelierMaple/4-POST#7-JENNIFER-ATELIER MAPLE.webp",
       ],
       "printemps": []
     },
@@ -43,13 +43,13 @@ const ARTISTS = [
     tags: ["illustration", "BD"],
     link: "https://www.instagram.com/aela.byrinthe/",
     img: {
-      "saint-valentin": "assets/img/artists/saintValentin/AelaByrinthe/Aela_Byrinthe.jpg",
-      "printemps": "assets/img/artists/Printemps/Aela_Byrinthe/aela_byrinthe.jpg"
+      "saint-valentin": "assets/img/artists/saintValentin/AelaByrinthe/Aela_Byrinthe.webp",
+      "printemps": "assets/img/artists/Printemps/Aela_Byrinthe/aela_byrinthe.webp"
     },
     gallery: {
       "saint-valentin": [
-        "assets/img/artists/saintValentin/AelaByrinthe/Aela-Byrinthe_oeuvres2.jpeg",
-        "assets/img/artists/saintValentin/AelaByrinthe/BD-pride_aela-byrinthe-A5.jpeg",
+        "assets/img/artists/saintValentin/AelaByrinthe/Aela-Byrinthe_oeuvres2.webp",
+        "assets/img/artists/saintValentin/AelaByrinthe/BD-pride_aela-byrinthe-A5.webp",
       ],
       "printemps": []
     },
@@ -62,21 +62,21 @@ const ARTISTS = [
     tags: ["micro-bijoux", "fait main"],
     link: "https://www.instagram.com/petit.bout.de.gout/",
     img: {
-      "saint-valentin": "assets/img/artists/saintValentin/PetitBoutDeGout/Petit_bout-de-gout.jpg",
-      "printemps": "assets/img/artists/Printemps/Petit_Bout_de_Gout1/petit_bout_de_gout.jpg"
+      "saint-valentin": "assets/img/artists/saintValentin/PetitBoutDeGout/Petit_bout-de-gout.webp",
+      "printemps": "assets/img/artists/Printemps/Petit_Bout_de_Gout1/petit_bout_de_gout.webp"
     },
     gallery: {
       "saint-valentin": [
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#2-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#3-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#4-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#5-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#6-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#7-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#8-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#9-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#10-PBDG.jpg",
-        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#11-PBDG.jpg",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#2-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#3-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#4-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#5-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#6-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#7-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#8-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#9-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#10-PBDG.webp",
+        "assets/img/artists/saintValentin/PetitBoutDeGout/4-POST#11-PBDG.webp",
       ],
       "printemps": []
     },
@@ -89,13 +89,13 @@ const ARTISTS = [
     tags: ["peinture", "illustration"],
     link: "https://www.instagram.com/luzartwork/",
     img: {
-      "saint-valentin": "assets/img/artists/saintValentin/Luzartwork/Luzartwork.jpg",
-      "printemps": "assets/img/artists/Printemps/LuzartWork/Luzartwork.jpg"
+      "saint-valentin": "assets/img/artists/saintValentin/Luzartwork/Luzartwork.webp",
+      "printemps": "assets/img/artists/Printemps/LuzartWork/Luzartwork.webp"
     },
     gallery: {
       "saint-valentin": [
-        "assets/img/artists/saintValentin/Luzartwork/4-POST#2-MANON-VEROT.jpg",
-        "assets/img/artists/saintValentin/Luzartwork/4-POST#3-MANON-VEROT.jpg",
+        "assets/img/artists/saintValentin/Luzartwork/4-POST#2-MANON-VEROT.webp",
+        "assets/img/artists/saintValentin/Luzartwork/4-POST#3-MANON-VEROT.webp",
       ],
       "printemps": []
     },
@@ -107,7 +107,7 @@ const ARTISTS = [
     bio: "Bois de Faune façonne des pièces artisanales en bois, mêlant matière brute et inspirations végétales pour des objets singuliers.",
     tags: ["bois", "fait main"],
     link: "https://www.instagram.com/bois_de_faune/",
-    img: "assets/img/artists/Printemps/Bois_de_Faune/Bois_de_faune.jpg",
+    img: "assets/img/artists/Printemps/Bois_de_Faune/Bois_de_faune.webp",
     gallery: [],
   },
   {
@@ -117,7 +117,7 @@ const ARTISTS = [
     bio: "Illustratrice lyonnaise, Manon Vaurs-Lemaître compose des scènes douces et poétiques où la nature rencontre l'imaginaire.",
     tags: ["illustration", "poésie"],
     link: "https://www.instagram.com/manon.vaurs.lemaitre/",
-    img: "assets/img/artists/Printemps/Manon_Vaurs_Lemaitre/manon_vaurs_lemaitre.jpg",
+    img: "assets/img/artists/Printemps/Manon_Vaurs_Lemaitre/manon_vaurs_lemaitre.webp",
     gallery: [],
   },
   {
@@ -127,7 +127,7 @@ const ARTISTS = [
     bio: "Talibri imagine un univers graphique singulier, entre illustrations colorées et personnages attachants.",
     tags: ["illustration", "graphisme"],
     link: "https://www.instagram.com/talibri_/",
-    img: "assets/img/artists/Printemps/Talibri/Talibri.png",
+    img: "assets/img/artists/Printemps/Talibri/Talibri.webp",
     gallery: [],
   },
   {
@@ -137,7 +137,7 @@ const ARTISTS = [
     bio: "Peintre et illustratrice, Théa Macera explore les émotions et la mémoire à travers des compositions sensibles et texturées.",
     tags: ["peinture", "illustration"],
     link: "https://www.instagram.com/thea.macera/",
-    img: "assets/img/artists/Printemps/Thea_Macera/Thea_macera.jpg",
+    img: "assets/img/artists/Printemps/Thea_Macera/Thea_macera.webp",
     gallery: [],
   },
 ];
