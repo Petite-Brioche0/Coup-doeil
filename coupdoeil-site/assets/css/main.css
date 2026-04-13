@@ -2802,8 +2802,8 @@ footer h4 {
   }
 
   .logo-img {
-    transform: scale(0.9);
-    height: 28px;
+    transform: scale(1.3);
+    height: 36px;
   }
 
   .nav-links {
@@ -2822,8 +2822,8 @@ footer h4 {
   }
 
   .logo-img {
-    height: 24px;
-    transform: scale(0.8);
+    height: 36px;
+    transform: scale(1.2);
   }
 
   .nav-links {
@@ -3060,30 +3060,37 @@ header.header--visible {
 }
 
 @media (max-width: 800px) {
-  .hero-editorial--poster .hero-editorial__top {
-    padding-top: 90px;
-    flex-direction: column;
-    gap: 8px;
-  }
   .hero-editorial.hero-editorial--poster {
-    height: auto;
-    min-height: 60vh;
+    height: 50vw;
+    min-height: 0;
     max-height: none;
     background-size: cover;
     background-position: center center;
   }
-}
-
-@media (max-width: 480px) {
-  .hero-editorial.hero-editorial--poster {
-    min-height: 55vh;
-  }
   .hero-editorial--poster .hero-editorial__top {
-    padding-top: 70px;
-    font-size: 0.62rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5vw 3vw 0;
+    gap: 0.5vw;
+    align-items: flex-start;
+    font-size: 1.3vw;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .hero-editorial--poster .hero-editorial__top span::before {
+    content: none;
   }
   .hero-editorial--poster .hero-editorial__bottom {
-    padding-bottom: clamp(48px, 6vh, 80px);
+    padding: 32vw var(--edge) 5vw;
+  }
+  .hero-editorial--poster .hero-editorial__cta {
+    font-size: 1.4vw;
+    padding: 0;
+    letter-spacing: 0.1em;
+    border-bottom: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 
