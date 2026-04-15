@@ -46,9 +46,17 @@
     });
   };
 
+  const updateAnalyticsConsent = (granted) => {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("consent", "update", {
+      analytics_storage: granted ? "granted" : "denied",
+    });
+  };
+
   const initCookieBanner = () => {
     const saved = localStorage.getItem("coupdoeil_cookies");
     const banner = document.querySelector(".cookie-banner");
+    if (saved === "accepted") updateAnalyticsConsent(true);
     if (!banner) return;
     if (saved) {
       banner.remove();
@@ -58,6 +66,7 @@
     const deny = banner.querySelector('[data-action="deny"]');
     const persist = (value) => {
       localStorage.setItem("coupdoeil_cookies", value);
+      updateAnalyticsConsent(value === "accepted");
       banner.classList.add("hide");
       setTimeout(() => banner.remove(), 300);
     };

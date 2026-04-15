@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/forms.css" />
     <link rel="icon" href="../assets/img/logo/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />
+    <!-- Google Analytics 4 (Consent Mode v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PNR328WM2J', { anonymize_ip: true });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNR328WM2J"></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -101,11 +118,13 @@
             </p>
           </article>
           <article class="card">
-            <h2>Mesure d'audience locale</h2>
+            <h2>Mesure d'audience — Google Analytics 4</h2>
             <p>
-              Un compteur de visites anonymes peut être activé pour connaître les
-              pages consultées et détecter les erreurs. Les données restent sur
-              nos serveurs et ne sont pas partagées avec des tiers.
+              Avec votre accord, Google Analytics 4 mesure le nombre de visiteurs
+              et les pages consultées. L'IP est anonymisée et aucun cookie
+              publicitaire n'est activé. Le service est fourni par Google Ireland
+              Ltd ; certaines données peuvent être transférées aux États-Unis dans
+              le cadre du Data Privacy Framework.
             </p>
           </article>
           <article class="card">
@@ -145,6 +164,16 @@
                 <td>coupdoeil_artists / coupdoeil_visitors</td>
                 <td>Conserver vos brouillons d'inscriptions sur l'appareil</td>
                 <td>LocalStorage — supprimé par vous ou lors d'une purge</td>
+              </tr>
+              <tr>
+                <td>_ga</td>
+                <td>Google Analytics — distinguer les visiteurs (déposé après consentement)</td>
+                <td>13 mois</td>
+              </tr>
+              <tr>
+                <td>_ga_PNR328WM2J</td>
+                <td>Google Analytics — état de la session GA4 (déposé après consentement)</td>
+                <td>13 mois</td>
               </tr>
             </tbody>
           </table>
@@ -215,8 +244,9 @@
     </footer>
     <div class="cookie-banner" role="dialog" aria-label="Bandeau cookies">
       <p>
-        Nous utilisons des cookies techniques pour le bon fonctionnement du site
-        et une mesure d'audience locale. Vous pouvez refuser ces cookies non
+        Nous utilisons des cookies techniques nécessaires au fonctionnement du
+        site et, sous réserve de votre accord, Google Analytics pour mesurer
+        l'audience de manière anonyme. Vous pouvez refuser ces cookies non
         essentiels.
       </p>
       <div class="cookie-actions">

@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/forms.css" />
     <link rel="icon" href="../assets/img/logo/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />
+    <!-- Google Analytics 4 (Consent Mode v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PNR328WM2J', { anonymize_ip: true });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNR328WM2J"></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -155,6 +172,11 @@
                 <td>Intérêt légitime (gestion des demandes)</td>
                 <td>12 mois maximum</td>
               </tr>
+              <tr>
+                <td>Mesure d'audience anonymisée (Google Analytics 4)</td>
+                <td>Consentement (bandeau cookies)</td>
+                <td>14 mois (durée GA4 par défaut)</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -182,10 +204,19 @@
       <section class="section">
         <h2>Cookies et mesure d'audience</h2>
         <p>
-          Nous n'utilisons que des cookies essentiels au fonctionnement du site et
-          un indicateur d'audience anonyme. Consultez la page
-          <a href="cookies.html">Cookies</a> pour connaitre les catégories,
-          durées de vie et paramétrages disponibles.
+          Au-delà des cookies essentiels au fonctionnement du site, nous utilisons
+          <strong>Google Analytics 4</strong> (fourni par Google Ireland Ltd) pour
+          mesurer l'audience de manière anonymisée. Ce traitement n'est activé
+          qu'après votre consentement explicite via le bandeau cookies, avec
+          anonymisation de l'adresse IP et sans signaux publicitaires.
+        </p>
+        <p>
+          Certaines données peuvent être transférées vers les États-Unis. Google
+          LLC est certifié au titre du
+          <a href="https://www.dataprivacyframework.gov" target="_blank" rel="noopener noreferrer">EU-US Data Privacy Framework</a>,
+          ce qui encadre ce transfert. Vous pouvez retirer votre consentement à
+          tout moment depuis la page <a href="cookies.html">Cookies</a> (bouton
+          « Réinitialiser mes choix »).
         </p>
       </section>
     </main>
@@ -232,8 +263,9 @@
     </footer>
     <div class="cookie-banner" role="dialog" aria-label="Bandeau cookies">
       <p>
-        Nous utilisons des cookies techniques pour le bon fonctionnement du site
-        et une mesure d'audience locale. Vous pouvez refuser ces cookies non
+        Nous utilisons des cookies techniques nécessaires au fonctionnement du
+        site et, sous réserve de votre accord, Google Analytics pour mesurer
+        l'audience de manière anonyme. Vous pouvez refuser ces cookies non
         essentiels.
       </p>
       <div class="cookie-actions">
