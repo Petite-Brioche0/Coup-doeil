@@ -236,35 +236,8 @@
 
   const initHeaderScroll = () => {
     const header = document.querySelector("header");
-    const banner = document.querySelector("[data-hero-banner]");
     if (!header) return;
-
-    // If no hero banner, show header immediately
-    if (!banner) {
-      header.classList.add("header--visible");
-      return;
-    }
-
-    let ticking = false;
-    const updateHeader = () => {
-      const bannerBottom = banner.offsetHeight * 0.7;
-      if (window.scrollY > bannerBottom) {
-        header.classList.add("header--visible");
-      } else {
-        header.classList.remove("header--visible");
-      }
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    updateHeader();
+    header.classList.add("header--visible");
   };
 
   const initImagePerformance = () => {

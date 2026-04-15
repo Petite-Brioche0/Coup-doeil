@@ -116,6 +116,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 40px;
   --spacing-2xl: 80px;
+  --header-height: 85px;
   --max-width: 100%;
 
   /* Typographie */
@@ -390,14 +391,22 @@ header {
   left: 0;
   right: 0;
   z-index: 50;
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom: 1px solid transparent;
-  transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, transform 0.4s ease;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
   padding: 0 clamp(12px, 3vw, 32px);
-  transform: translateY(-100%);
-  pointer-events: none;
-  opacity: 0;
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+:root[data-theme="dark"] header {
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+}
+
+body {
+  padding-top: var(--header-height, 85px);
 }
 
 header.header--visible {
@@ -2529,6 +2538,10 @@ footer h4 {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --header-height: 72px;
+  }
+
   header {
     z-index: 100;
     padding: 0 var(--spacing);
